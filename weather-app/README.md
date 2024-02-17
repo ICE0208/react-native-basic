@@ -76,3 +76,7 @@ https://docs.expo.dev/versions/latest/
 
 기본적으로 View는 `flex`이다. flex direction의 기본값은 `column`이다.  
 반응형 레이아웃을 위해 width나 height는 잘 사용하지 않고, 보통 `flex`로 반응형 레이아웃을 구성한다.
+
+## Expo Go 새로고침 안될 때?
+
+expo를 실행시킨 터미널에서 `r`을 누르면 `reload app`이 되면서 다시 정상작동한다.
