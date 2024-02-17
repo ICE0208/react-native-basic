@@ -142,3 +142,7 @@ export default function App() {
 1. `requestForegroundPermissionsAsync`로 위치 권한을 요청한다.
 2. `getCurrentPositionAsync`로 `위도`와 `경도`의 정보를 가져올 수 있음. `accuracy` 옵션을 이용해서 위치 정확도를 지정할 수 있다.
 3. `reverseGeocodeAsync`를 이용하여 `위도`와 `경도`의 정보를 가지고 `우편 주소`를 얻을 수 있다.
+
+## 로딩 인디케이터
+
+react native의 `ActivityIndicator`를 사용하면 로딩바를 쉽게 만들 수 있다.
