@@ -131,3 +131,14 @@ export default function App() {
 ```
 
 > `useWindowDimensions` 을 이용하면 디바이스의 크기를 가져올 수 있다.
+
+## 위치 가져오기
+
+`Expo Location`을 이용하면 위치 정보를 쉽게 가져올 수 있다.  
+[https://docs.expo.dev/versions/latest/sdk/location/](https://docs.expo.dev/versions/latest/sdk/location/)
+
+### 위치의 우편 주소 가져오기
+
+1. `requestForegroundPermissionsAsync`로 위치 권한을 요청한다.
+2. `getCurrentPositionAsync`로 `위도`와 `경도`의 정보를 가져올 수 있음. `accuracy` 옵션을 이용해서 위치 정확도를 지정할 수 있다.
+3. `reverseGeocodeAsync`를 이용하여 `위도`와 `경도`의 정보를 가지고 `우편 주소`를 얻을 수 있다.
