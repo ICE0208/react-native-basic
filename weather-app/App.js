@@ -1,16 +1,46 @@
-import { StyleSheet, Text, View } from "react-native";
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+  useWindowDimensions,
+} from "react-native";
 
 export default function App() {
+  const { width: SCREEN_WIDTH } = useWindowDimensions();
+
   return (
     <View style={styles.container}>
       <View style={styles.city}>
         <Text style={styles.cityName}>Seoul</Text>
       </View>
       <View style={styles.weather}>
-        <View style={styles.day}>
-          <Text style={styles.temperature}>27</Text>
-          <Text style={styles.description}>Sunny</Text>
-        </View>
+        <ScrollView
+          horizontal
+          pagingEnabled
+          showsHorizontalScrollIndicator={false}
+        >
+          <View style={[styles.day, { width: SCREEN_WIDTH }]}>
+            <Text style={styles.temperature}>27</Text>
+            <Text style={styles.description}>Sunny</Text>
+          </View>
+          <View style={[styles.day, { width: SCREEN_WIDTH }]}>
+            <Text style={styles.temperature}>28</Text>
+            <Text style={styles.description}>Sunny</Text>
+          </View>
+          <View style={[styles.day, { width: SCREEN_WIDTH }]}>
+            <Text style={styles.temperature}>29</Text>
+            <Text style={styles.description}>Sunny</Text>
+          </View>
+          <View style={[styles.day, { width: SCREEN_WIDTH }]}>
+            <Text style={styles.temperature}>30</Text>
+            <Text style={styles.description}>Sunny</Text>
+          </View>
+          <View style={[styles.day, { width: SCREEN_WIDTH }]}>
+            <Text style={styles.temperature}>31</Text>
+            <Text style={styles.description}>Sunny</Text>
+          </View>
+        </ScrollView>
       </View>
     </View>
   );
@@ -31,7 +61,6 @@ const styles = StyleSheet.create({
     flex: 3,
   },
   day: {
-    flex: 1,
     alignItems: "center",
   },
   temperature: {

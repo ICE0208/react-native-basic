@@ -80,3 +80,54 @@ https://docs.expo.dev/versions/latest/
 ## Expo Go 새로고침 안될 때?
 
 expo를 실행시킨 터미널에서 `r`을 누르면 `reload app`이 되면서 다시 정상작동한다.
+
+## 스크롤 구현하기
+
+```js
+import { ScrollView } from "react-native";
+```
+
+> react-native의 `ScrollView` 컴포넌트를 이용하여 스크롤을 구현할 수 있다.
+
+```js
+export default function App() {
+  return (
+    <View>
+      <ScrollView
+        horizontal
+        pagingEnabled
+        showsHorizontalScrollIndicator={false}
+      >
+        <View></View>
+        <View></View>
+        <View></View>
+        <View></View>
+        <View></View>
+        <View></View>
+      </ScrollView>
+    </View>
+  );
+}
+```
+
+> `horizontal` props를 이용하면 수평으로 스크롤하게도 할 수 있다.  
+> ScrollView에 스타일을 주고 싶을 때는 style props 대신 `contentContainerStyle` props 를 이용한다.
+
+> `pagingEnabled` props를 true로 설정하면 스크롤뷰가 스크롤 아이템들의 크기에 맞게 멈춘다. horizontal 일 때 적용할 수 있다.  
+> [원문] When true, the scroll view stops on multiples of the scroll view's size when scrolling. This can be used for horizontal pagination.
+
+> `showsHorizontalScrollIndicator`를 False로 설정하면 수평방향으로 스크롤 할 때 인디케이터를 숨길 수 있다.
+
+## 디바이스의 크기 가져오기
+
+```js
+import { View, useWindowDimensions } from "react-native";
+
+export default function App() {
+  const { width, height } = useWindowDimensions();
+
+  return <View></View>;
+}
+```
+
+> `useWindowDimensions` 을 이용하면 디바이스의 크기를 가져올 수 있다.
