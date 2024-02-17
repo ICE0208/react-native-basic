@@ -60,3 +60,19 @@ export default function App() {
 ## Status Bar
 
 Status Bar는 상단에 있는 시계, 배터리, WiFi 등 의 아이콘을 의미한다. 기본으로 되어있는 `auto`를 `light`로 바꾸면 아이콘이 하얀색이 된다. 이처럼 몇몇 컴포넌트는 화면에 표시되지 않고 `운영체제와 소통` 하기 위해 사용된다.
+
+## 관련 자료
+
+React Native Doc
+https://reactnative.dev/docs/components-and-apis
+
+React Native Directory
+https://reactnative.directory/
+
+Expo Doc
+https://docs.expo.dev/versions/latest/
+
+## Layout System
+
+기본적으로 View는 `flex`이다. flex direction의 기본값은 `column`이다.  
+반응형 레이아웃을 위해 width나 height는 잘 사용하지 않고, 보통 `flex`로 반응형 레이아웃을 구성한다.
