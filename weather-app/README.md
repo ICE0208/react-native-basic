@@ -146,3 +146,8 @@ export default function App() {
 ## 로딩 인디케이터
 
 react native의 `ActivityIndicator`를 사용하면 로딩바를 쉽게 만들 수 있다.
+
+## EXPO ICON
+
+`npx create-expo-app`로 프로젝트를 생성했다면 아이콘 패키지가 이미 설치되어 있다. expo가 기본으로 제공하는 아이콘으로도 사용하기에는 충분하다.  
+[https://docs.expo.dev/guides/icons/](https://docs.expo.dev/guides/icons/)

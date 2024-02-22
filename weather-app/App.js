@@ -8,6 +8,7 @@ import {
   useWindowDimensions,
 } from "react-native";
 import * as Location from "expo-location";
+import { MaterialIcons } from "@expo/vector-icons";
 import { API_KEY } from "@env";
 
 export default function App() {
@@ -65,6 +66,11 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.city}>
+        <MaterialIcons
+          name="place"
+          size={70}
+          color="black"
+        />
         <Text style={styles.cityName}>{city}</Text>
       </View>
       <View style={styles.weatherView}>
@@ -110,6 +116,7 @@ const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: "tomato" },
   city: {
     flex: 1.3,
+    flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
   },
